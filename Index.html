@@ -1,62 +1,80 @@
-<!DOCTYPEhtml>
+//Add decimal feature
+//Add theme change feature
+//Make it responsive
+<!DOCTYPE html>
 <head>
   <title>Calculator</title>
   <style>
     body {
-    background-color=black;
+    /*background-image: url("bg.jpg.jpg");*/
+    background-color:rgb(41, 40, 40);
+    text-align:center;
+    color:black;
+    align-items: center;
+    } button {
+      border:none;
+      border-radius:2px;
+      height:80px;
+      width:80px;
+      font-size: 40px;
+      text-decoration: bold;
+    } .reset {
+      width:163px;
+    } .equal {
+      height:330px;
+      background-color: rgb(216, 1, 66);
+      color: whitesmoke;
+    } div {
+      background-color:rgb(41, 40, 40);
+      width: 325px;
+      align-items: center;
+    } h1 {
+      background-color:rgb(41, 40, 40);
+      color:white;
     }
   </style>
 </head>
 <body>
+  <h1 id="display">0</h1>
   <div>
-<table>
+<center><table>
   <tr>
-    <td><button>+</button></td>
-    <td><button>-</button></td>
-    <td><button>*</button></td>
-    <td><button>/</button></td>
+    <td><button onclick="calculate += ' + '; console.log(calculate);">+</button></td>
+    <td><button onclick="calculate += ' - '; console.log(calculate);">-</button></td>
+    <td><button onclick="calculate += ' * '; console.log(calculate);">*</button></td>
+    <td><button onclick="calculate += ' / '; console.log(calculate);">/</button></td>
     
-  </tr>
-  <tr>
-    <td><button>1</button></td>
-    <td><button>2</button></td>
-    <td><button>3</button></td>
-    <td rowspan="4"><button>=</button></td>
-    <td></td>
   </tr>
   <tr>
-    <td><button>4</button></td>
-    <td><button>5</button></td>
-    <td><button>6</button></td>
-    <td></td>
-  </tr>
-   <tr>
-    <td><button>7</button></td>
-     <td><button>8</button></td>
-     <td><button>9</button></td>
-     <td></td>
-  </tr>
-   <tr>
-    <td><button>0</button></td>
-     <td colspan="2"><button>Reset</button></td>
-  </tr>
-</table>
-    
-    
-    
-    
+    <td><button onclick="calculate+='1'; console.log(calculate);">1</button></td>
+    <td><button onclick="calculate+='2'; console.log(calculate);">2</button></td>
+    <td><button onclick="calculate+='3'; console.log(calculate);">3</button></td>
+    <td rowspan="4"><button class="equal" onclick="calculate=eval(calculate); console.log(calculate); //.toString(); document.getElementById('display').innerText = calculate;">=</button></td>
    
+  </tr>
+  <tr>
+    <td><button onclick="calculate+='4'; console.log(calculate);">4</button></td>
+    <td><button onclick="calculate+='5'; console.log(calculate);">5</button></td>
+    <td><button onclick="calculate+='6'; console.log(calculate);">6</button></td>
     
+  </tr>
+   <tr>
+    <td><button onclick="calculate+='7'; console.log(calculate);">7</button></td>
+     <td><button onclick="calculate+='8'; console.log(calculate);">8</button></td>
+     <td><button onclick="calculate+='9'; console.log(calculate);">9</button></td>
     
+  </tr>
+   <tr>
+    <td><button onclick="calculate+='0'; console.log(calculate);">0</button></td>
+     <td colspan="2"><button class="reset" onclick="calculate=''; console.log('Cleared'); ">Clear</button></td>
+  </tr>
+</table></center>
     
-    
-    
-    
-    
-    
-    
-    
-    
-  </div>
+ </div>
+
+ <script>
+  let calculate='';
+  console.log(0);
+ </script>
 </body>
 </html>
